@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweetee — Feel closer every day, in just minutes.</title>
+  <meta name="description"
+    content="Sweetee brings couples closer with conversation starters, mini games, doodles, and more — in just minutes a day. Join the waitlist." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicons -->
+  <link rel="icon" href="sweetee-favicon.webp" type="image/webp" />
+</head>
+
+<body>
+
+  <!-- ─── Nav ─── -->
+  <nav class="nav">
+    <a href="#" class="nav__brand">
+      <span class="nav__logo">Sweetee</span>
+      <img src="sweetee-icon-transparent.webp" alt="Sweetee App Icon" class="nav__icon" />
+    </a>
+    <a href="#waitlist" class="nav__cta">Join Waitlist</a>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section class="hero" id="waitlist">
+    <div class="hero__content reveal">
+      <img src="sweetee icon-2.webp" alt="Sweetee App Icon" class="hero__icon" />
+      <h1 class="hero__headline">Feel closer every day,<br />in just minutes.</h1>
+      <p class="hero__subheadline">
+        Sweetee brings couples closer with conversation starters, mini games, doodles, and more — in just minutes a day.
+      </p>
+      <form class="hero__form" id="waitlistForm">
+        <input type="email" class="hero__input" id="emailInput" placeholder="Enter your email" required
+          autocomplete="email" />
+        <button type="submit" class="hero__submit">Join the Waitlist</button>
+      </form>
+      <div class="hero__success" id="successMessage">
+        ✓&ensp;You're on the list! We'll let you know when Sweetee is ready.
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="phone-mockup">
+        <div class="phone-mockup__notch"></div>
+        <div class="phone-mockup__screen">
+          <div class="phone-mockup__placeholder">
+            <div class="phone-mockup__placeholder-logo">Sweetee</div>
+            <div class="phone-mockup__placeholder-hearts">
+              <div class="phone-mockup__placeholder-heart"></div>
+              <div class="phone-mockup__placeholder-heart"></div>
+              <div class="phone-mockup__placeholder-heart"></div>
+            </div>
+            <div class="phone-mockup__placeholder-text">App screenshot coming soon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Features ─── -->
+  <div class="divider">
+    <div class="divider__line"></div>
+  </div>
+
+  <section class="features">
+    <h2 class="features__heading reveal">Your daily dose of "us"</h2>
+    <p class="features__subheading reveal" style="transition-delay: 0.08s;">
+      Games to play, things to say, and a widget to brighten their day.
+    </p>
+
+    <div class="features__grid">
+      <!-- Mini-games -->
+      <div class="feature">
+        <div class="feature__screenshot">
+          <div class="feature__screen-inner feature__screen-inner--games">
+            <div class="feature__screen-emoji">🎮</div>
+            <div class="feature__screen-label">Placeholder screenshot</div>
+          </div>
+        </div>
+        <h3 class="feature__name">Mini-games</h3>
+      </div>
+
+      <!-- Widgets -->
+      <div class="feature">
+        <div class="feature__screenshot">
+          <div class="feature__screen-inner feature__screen-inner--widgets">
+            <div class="feature__screen-emoji">📱</div>
+            <div class="feature__screen-label">Placeholder screenshot</div>
+          </div>
+        </div>
+        <h3 class="feature__name">Widgets</h3>
+      </div>
+
+      <!-- Conversation Starters -->
+      <div class="feature">
+        <div class="feature__screenshot">
+          <div class="feature__screen-inner feature__screen-inner--conversations">
+            <div class="feature__screen-emoji">💬</div>
+            <div class="feature__screen-label">Placeholder screenshot</div>
+          </div>
+        </div>
+        <h3 class="feature__name">Conversation Starters</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Founder's Note ─── -->
+  <div class="divider">
+    <div class="divider__line"></div>
+  </div>
+
+  <section class="founder">
+    <div class="founder__card reveal">
+      <div class="founder__label">From the Founder</div>
+      <h2 class="founder__heading">Hi, I'm Benson 👋</h2>
+      <div class="founder__body">
+        <p>
+          I built Sweetee to help me and my girlfriend Ya connect more meaningfully in a long distance relationship.
+          I've found that it's easy to get stuck exchanging updates instead of actually sharing things together.
+        </p>
+        <p>
+          I want to create a fun space for us to go into when our days feel a bit routine, because these small moments
+          of play and conversation is what compounds into a stronger bond over time.
+        </p>
+        <p>
+          I hope you and your person find something special in here too. :)
+        </p>
+      </div>
+      <div class="founder__signature">
+        <div class="founder__avatar">B</div>
+        <span>Benson, founder of Sweetee</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <div class="footer__logo">Sweetee</div>
+    <p class="footer__text">Made with ♥ for couples everywhere</p>
+  </footer>
+
+  <!-- ─── Scripts ─── -->
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Waitlist form
+    const form = document.getElementById('waitlistForm');
+    const emailInput = document.getElementById('emailInput');
+    const success = document.getElementById('successMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      if (email) {
+        form.style.display = 'none';
+        success.classList.add('show');
+        console.log('Waitlist signup:', email);
+      }
+    });
+  </script>
+
+</body>
+
+</html>
