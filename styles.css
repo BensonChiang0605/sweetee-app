@@ -125,8 +125,8 @@ a {
 }
 
 .nav__icon {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     margin-bottom: 15px;
 }
@@ -343,94 +343,13 @@ a {
     position: relative;
 }
 
-.phone-mockup {
+.hero__mockup-image {
     width: 280px;
-    height: 570px;
-    background: var(--neutral-900);
-    border-radius: 44px;
-    padding: 12px;
-    box-shadow:
-        0 30px 80px rgba(26, 26, 26, 0.15),
-        0 8px 24px rgba(26, 26, 26, 0.08),
-        inset 0 0 0 2px rgba(255, 255, 255, 0.05);
+    height: auto;
+    display: block;
     position: relative;
-}
-
-.phone-mockup__notch {
-    width: 120px;
-    height: 28px;
-    background: var(--neutral-900);
-    border-radius: 0 0 18px 18px;
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.phone-mockup__screen {
-    width: 100%;
-    height: 100%;
-    background: var(--neutral-50);
-    border-radius: 34px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.phone-mockup__placeholder {
-    width: 100%;
-    height: 100%;
-    background:
-        linear-gradient(180deg, var(--cream-100) 0%, var(--blush-100) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-lg);
-    gap: var(--space-md);
-}
-
-.phone-mockup__placeholder-logo {
-    font-family: var(--font-logo);
-    font-size: 32px;
-    color: var(--rose-500);
-}
-
-.phone-mockup__placeholder-text {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 400;
-    color: var(--neutral-400);
-    text-align: center;
-}
-
-.phone-mockup__placeholder-hearts {
-    display: flex;
-    gap: 8px;
-    margin-top: 4px;
-}
-
-.phone-mockup__placeholder-heart {
-    width: 28px;
-    height: 28px;
-    background: var(--blush-200);
-    border-radius: 50%;
-    position: relative;
-}
-
-.phone-mockup__placeholder-heart::before {
-    content: '♥';
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: var(--rose-400);
+    z-index: 1;
+    filter: drop-shadow(0 30px 80px rgba(26, 26, 26, 0.15)) drop-shadow(0 8px 24px rgba(26, 26, 26, 0.08));
 }
 
 /* Decorative glow behind phone */
@@ -480,7 +399,7 @@ a {
 .features__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+    gap: var(--space-lg);
 }
 
 .feature {
@@ -490,52 +409,14 @@ a {
     gap: var(--space-md);
 }
 
-.feature__screenshot {
+.feature__image {
     width: 100%;
-    max-width: 220px;
-    aspect-ratio: 9 / 19.5;
-    background: var(--neutral-900);
-    border-radius: 32px;
-    padding: 8px;
+    max-width: 350px;
+    border-radius: 24px;
     box-shadow:
         0 16px 48px rgba(26, 26, 26, 0.1),
         0 4px 12px rgba(26, 26, 26, 0.06);
-}
-
-.feature__screen-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: var(--space-md);
-}
-
-.feature__screen-inner--games {
-    background: linear-gradient(135deg, var(--blush-100) 0%, var(--rose-100) 100%);
-}
-
-.feature__screen-inner--widgets {
-    background: linear-gradient(135deg, var(--cream-100) 0%, var(--cream-200) 100%);
-}
-
-.feature__screen-inner--conversations {
-    background: linear-gradient(135deg, var(--blush-100) 0%, var(--cream-100) 100%);
-}
-
-.feature__screen-emoji {
-    font-size: 40px;
-    line-height: 1;
-}
-
-.feature__screen-label {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 400;
-    color: var(--neutral-400);
+    object-fit: cover;
 }
 
 .feature__name {
@@ -682,7 +563,7 @@ a {
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         padding: var(--space-2xl) var(--space-lg);
         gap: var(--space-xl);
         min-height: auto;
@@ -694,22 +575,22 @@ a {
 
     .hero__subheadline {
         max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .hero__form {
         max-width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .hero__success {
-        margin: 0 auto;
+        margin: 0;
     }
 
     .hero__badge {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .features__grid {
@@ -717,18 +598,12 @@ a {
         gap: var(--space-md);
     }
 
-    .feature__screenshot {
+    .feature__image {
         max-width: 180px;
     }
 
-    .phone-mockup {
+    .hero__mockup-image {
         width: 240px;
-        height: 490px;
-        border-radius: 38px;
-    }
-
-    .phone-mockup__screen {
-        border-radius: 28px;
     }
 }
 
@@ -739,6 +614,11 @@ a {
 
     .hero {
         padding: var(--space-xl) var(--space-lg);
+    }
+
+    .hero__icon {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero__form {
@@ -758,8 +638,8 @@ a {
         gap: var(--space-xl);
     }
 
-    .feature__screenshot {
-        max-width: 200px;
+    .feature__image {
+        max-width: 300px;
     }
 
     .founder {
@@ -770,13 +650,7 @@ a {
         padding: var(--space-lg);
     }
 
-    .phone-mockup {
+    .hero__mockup-image {
         width: 220px;
-        height: 450px;
-        border-radius: 34px;
-    }
-
-    .phone-mockup__screen {
-        border-radius: 24px;
     }
 }
