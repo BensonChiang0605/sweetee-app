@@ -58,6 +58,18 @@
     </p>
 
     <div class="features__grid">
+      <!-- Conversation Starters -->
+      <div class="feature">
+        <img src="conversation-starters.webp" alt="Conversation Starters screen" class="feature__image" />
+        <h3 class="feature__name">Conversation Starters</h3>
+      </div>
+
+      <!-- Mood Check-in -->
+      <div class="feature">
+        <img src="sweetee-mood-screen.webp" alt="Mood Check-in screen" class="feature__image" />
+        <h3 class="feature__name">Mood Check-in</h3>
+      </div>
+
       <!-- Mini-games -->
       <div class="feature">
         <img src="mini-games.webp" alt="Mini-games screen" class="feature__image" />
@@ -68,12 +80,6 @@
       <div class="feature">
         <img src="widgets.webp" alt="Widgets screen" class="feature__image" />
         <h3 class="feature__name">Widgets</h3>
-      </div>
-
-      <!-- Conversation Starters -->
-      <div class="feature">
-        <img src="conversation-starters.webp" alt="Conversation Starters screen" class="feature__image" />
-        <h3 class="feature__name">Conversation Starters</h3>
       </div>
     </div>
   </section>
@@ -132,13 +138,35 @@
     const emailInput = document.getElementById('emailInput');
     const success = document.getElementById('successMessage');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = emailInput.value.trim();
+
       if (email) {
-        form.style.display = 'none';
-        success.classList.add('show');
-        console.log('Waitlist signup:', email);
+        try {
+          const formBody = `email=${encodeURIComponent(email)}`;
+
+          // TODO: Replace <YOUR_FORM_ID> with your actual Loops form ID
+          const response = await fetch("https://app.loops.so/api/newsletter-form/cmlxvlrt302oh0iwl16vbao0e", {
+            method: "POST",
+            body: formBody,
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          });
+
+          if (response.ok) {
+            form.style.display = 'none';
+            success.classList.add('show');
+            console.log('Waitlist signup:', email);
+          } else {
+            alert("Something went wrong. Please try again later.");
+            console.error("Form submission failed.");
+          }
+        } catch (error) {
+          alert("An error occurred. Please try again.");
+          console.error("Error submitting form:", error);
+        }
       }
     });
   </script>
