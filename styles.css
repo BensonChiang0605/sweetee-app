@@ -484,14 +484,30 @@ a {
     position: relative;
 }
 
+.founder__heading-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
 .founder__heading {
     font-family: var(--font-headline);
     font-weight: 500;
     font-style: italic;
     font-size: 32px;
     color: var(--neutral-900);
-    margin-bottom: var(--space-lg);
+    margin-bottom: 0;
     position: relative;
+}
+
+.founder__couple-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(192, 57, 43, 0.1);
+    border: 2px solid var(--rose-100);
 }
 
 .founder__body {
