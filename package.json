@@ -1,0 +1,12 @@
+{
+  "name": "sweetee-app",
+  "version": "1.0.0",
+  "description": "Sweetee landing page",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
