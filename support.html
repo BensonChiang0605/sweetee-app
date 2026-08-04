@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | Sweetee</title>
+  <meta name="description" content="Get help with Sweetee. Reach out via email or follow us on Instagram." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="sweetee-favicon.webp" type="image/webp" />
+  <style>
+    .support {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: var(--space-3xl) var(--space-xl);
+      text-align: center;
+    }
+
+    .support__heading {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--neutral-900);
+      margin-bottom: var(--space-sm);
+    }
+
+    .support__sub {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 18px;
+      color: var(--neutral-600);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .support__cards {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .support__card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      background: var(--cream-200);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-xl);
+      text-align: left;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .support__card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(192, 57, 43, 0.1);
+    }
+
+    .support__icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .support__card-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--neutral-500);
+      margin-bottom: 4px;
+    }
+
+    .support__card-value {
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--rose-500);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Nav ─── -->
+  <nav class="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__logo">Sweetee</span>
+      <img src="sweetee-favicon.webp" alt="Sweetee App Icon" class="nav__icon" />
+    </a>
+    <a href="index.html#waitlist" class="nav__cta">Join Waitlist</a>
+  </nav>
+
+  <!-- ─── Content ─── -->
+  <main class="support reveal visible">
+    <h1 class="support__heading">Support</h1>
+    <p class="support__sub">We'd love to hear from you. Reach out anytime.</p>
+
+    <div class="support__cards">
+      <a href="mailto:hello@support.sweetee-app.com" class="support__card">
+        <span class="support__icon">✉️</span>
+        <div>
+          <div class="support__card-label">General support &amp; privacy</div>
+          <div class="support__card-value">hello@support.sweetee-app.com</div>
+        </div>
+      </a>
+
+      <a href="mailto:safety@support.sweetee-app.com" class="support__card">
+        <span class="support__icon">🛟</span>
+        <div>
+          <div class="support__card-label">Safety concerns</div>
+          <div class="support__card-value">safety@support.sweetee-app.com</div>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/sweetee_app/" target="_blank" rel="noopener noreferrer" class="support__card">
+        <span class="support__icon">📸</span>
+        <div>
+          <div class="support__card-label">Follow us on Instagram</div>
+          <div class="support__card-value">@sweetee_app</div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <div class="footer__logo">Sweetee</div>
+    <p class="footer__text">Made with ♥ for couples everywhere</p>
+  </footer>
+
+</body>
+
+</html>

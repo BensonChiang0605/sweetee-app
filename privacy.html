@@ -19,303 +19,159 @@
       <span class="nav__logo">Sweetee</span>
       <img src="sweetee-favicon.webp" alt="Sweetee App Icon" class="nav__icon" />
     </a>
-    <a href="index.html#waitlist" class="nav__cta">Join Waitlist</a>
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <a href="support.html" style="font-size: 14px; font-weight: 500; color: var(--neutral-600); transition: color 0.2s ease;" onmouseover="this.style.color='var(--rose-500)'" onmouseout="this.style.color='var(--neutral-600)'">Support</a>
+      <a href="index.html#waitlist" class="nav__cta">Join Waitlist</a>
+    </div>
   </nav>
 
   <!-- ─── Content ─── -->
   <main class="legal reveal visible">
     <h1 class="legal__heading">Privacy Policy</h1>
     <div class="legal__content">
-      <p><strong>Effective Date:</strong> April 7, 2026</p>
-      <p><strong>Last Updated:</strong> April 7, 2026</p>
+      <p><strong>Effective date:</strong> August 3, 2026</p>
+      <p><strong>Last updated:</strong> August 3, 2026</p>
+      <p>This policy applies to Sweetee's external beta, the Sweetee mobile app, and this website. The beta is still evolving; we will update this policy before any material change to these practices.</p>
 
       <hr />
 
-      <h2>1. Introduction</h2>
-      <p>Welcome to Sweetee ("we," "our," or "us"). Sweetee is a private couples app designed to help romantic partners stay connected through mood sharing, photos, messages, and relationship milestones.</p>
-      <p>This Privacy Policy explains what information we collect, how we use it, who we share it with, and the choices you have regarding your data. By using Sweetee, you agree to the practices described in this policy.</p>
-      <p>If you have questions or concerns, contact us at: <strong>hello@sweeteeapp.com</strong></p>
+      <h2>1. Who we are and the scope of this policy</h2>
+      <p>Sweetee is a private shared space for paired partners to exchange affectionate moments and maintain everyday closeness. It is operated by <strong>Benson Chiang</strong>, an individual based in Taiwan (&ldquo;Sweetee,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).</p>
+      <p>This policy explains the personal information we collect, why we use it, who receives it, and the choices available to you. It does not cover third-party services' independent practices; their policies are linked below where relevant.</p>
 
       <hr />
 
-      <h2>2. Information We Collect</h2>
+      <h2>2. Information we collect</h2>
 
-      <h3>2.1 Account Information</h3>
-      <p>When you create an account, we collect:</p>
+      <h3>Account and profile information</h3>
       <ul>
-        <li><strong>Email address</strong> — used to authenticate your account</li>
-        <li><strong>Password</strong> — stored securely via Supabase Auth (hashed, never stored in plaintext)</li>
-        <li><strong>Apple ID credentials</strong> (if you use Sign in with Apple) — your name and email as provided by Apple</li>
+        <li>email address, account identifier, and account credentials or Sign in with Apple information needed to create and secure your account;</li>
+        <li>display name, birthday, avatar, relationship preferences, relationship source, distance preference, and nurture goals that you choose to provide; and</li>
+        <li>the version and time of your acceptance of Sweetee's beta terms and this policy when you create an account.</li>
       </ul>
 
-      <h3>2.2 Profile Information</h3>
-      <p>During onboarding and normal use, we collect:</p>
+      <h3>Shared Space information</h3>
+      <p>When you pair with another person, Sweetee creates a Shared Space. We process the information you and your partner add to it, including:</p>
       <ul>
-        <li><strong>Display name</strong> — shown to your partner</li>
-        <li><strong>Birthday</strong> — used for relationship milestone tracking and reminders</li>
-        <li><strong>Profile photo (avatar)</strong> — displayed to your partner; stored in cloud storage</li>
-        <li><strong>Relationship information</strong> — how you met, whether you're long-distance, and relationship nurture goals you select during onboarding</li>
+        <li>pairing invite codes, anniversary dates, special dates, milestones, and timestamps;</li>
+        <li>moods, optional mood notes, daily answers, quiz responses, and activity used to calculate streaks;</li>
+        <li>messages, shared photos, doodle layers, and other content you choose to send to your partner; and</li>
+        <li>the information needed to create a Doodle Wallpaper. A Base Wallpaper that you select on your own device is not shared with your partner.</li>
       </ul>
 
-      <h3>2.3 Relationship &amp; Couple Data</h3>
-      <p>When you pair with a partner, we collect and store:</p>
+      <h3>Device, diagnostic, and purchase information</h3>
       <ul>
-        <li><strong>Anniversary date</strong> — used for milestone countdowns and widgets</li>
-        <li><strong>Special dates and milestones</strong> — events you add (e.g., "First Date," "Got Engaged")</li>
-        <li><strong>Invite code</strong> — a temporary 6-digit code used to link two accounts (expires after 15 minutes)</li>
+        <li>an Expo push token, which is a device identifier used to deliver notifications;</li>
+        <li>limited reliability diagnostics such as crash data, performance data, app and device/runtime information, opaque account identifiers, and scrubbed operational events. Sweetee is configured not to intentionally send message or note content, names, emails, photos, doodles, media paths, credentials, tokens, screenshots, view hierarchies, or session replay to its diagnostics service; and</li>
+        <li>purchase, entitlement, product, and transaction status from Apple and RevenueCat. Sweetee does not receive your payment-card number.</li>
       </ul>
 
-      <h3>2.4 Content You Create or Share</h3>
+      <h3>Support and safety information</h3>
       <ul>
-        <li><strong>Moods</strong> — your selected mood (e.g., happy, loved, tired), an optional custom emoji, and an optional mood note</li>
-        <li><strong>Photos</strong> — images you share with your partner (compressed and stored in cloud storage)</li>
-        <li><strong>Messages</strong> — text messages and photo messages sent to your partner</li>
-        <li><strong>Doodles</strong> — drawing strokes and exported images from the shared doodle canvas</li>
-        <li><strong>Quiz responses</strong> — your answers to relationship quiz questions</li>
+        <li>the contents of messages you send to support, including the contact information you provide; and</li>
+        <li>when you report partner content, your report reason, report metadata, the reported person's identifier, and a snapshot or reference to the reported content. Reporting is the point at which that private content becomes available to Sweetee's safety team. We do not proactively send private messages or images to third-party scanning services.</li>
       </ul>
 
-      <h3>2.5 Usage &amp; Activity Data</h3>
+      <h3>Website and waitlist information</h3>
       <ul>
-        <li><strong>Daily activity</strong> — whether you were active on a given date, used to calculate relationship streaks</li>
-        <li><strong>Timestamps</strong> — when content was created or updated</li>
-      </ul>
-
-      <h3>2.6 Device Information</h3>
-      <ul>
-        <li><strong>Push notification token</strong> — a device identifier provided by Expo used to deliver push notifications to your device; stored in your profile</li>
+        <li>when you join the waitlist, your email address and the submission details needed to manage the waitlist; and</li>
+        <li>ordinary technical information that may be generated when you visit the website, such as IP address, browser/device information, request time, and server logs.</li>
       </ul>
 
       <hr />
 
-      <h2>3. How We Use Your Information</h2>
+      <h2>3. How we use information</h2>
       <p>We use the information we collect to:</p>
       <ul>
-        <li><strong>Provide the app's core features</strong> — mood sharing, photo sharing, messaging, doodle canvas, quizzes, and milestone tracking</li>
-        <li><strong>Connect you with your partner</strong> — making your profile, moods, photos, messages, and activity visible to your paired partner</li>
-        <li><strong>Send push notifications</strong> — to alert your partner when you share a photo or take actions in the app</li>
-        <li><strong>Display iOS widgets</strong> — your partner's mood and your relationship milestones are displayed on your device's home screen and lock screen via native widgets</li>
-        <li><strong>Authenticate your account</strong> — verify your identity when you sign in</li>
-        <li><strong>Improve the app</strong> — diagnose technical issues and understand how features are used</li>
+        <li>create and secure accounts, administer beta access, pair partners, and provide the Shared Space and related features;</li>
+        <li>show the content and profile information intended for a paired partner, send push notifications, and support device widgets;</li>
+        <li>administer subscriptions, restore purchases, prevent misuse, respond to support requests, and review reported content;</li>
+        <li>monitor reliability, troubleshoot faults, protect the service, and improve the app; and</li>
+        <li>manage the website and waitlist, including sending updates where you have asked to receive them.</li>
       </ul>
-      <p>We do not use your personal information for advertising, profiling, or sale to third parties.</p>
+      <p>We do not sell personal information, use it for cross-context behavioral advertising, or use it to track you across other companies' apps or websites.</p>
 
       <hr />
 
-      <h2>4. Information Shared with Your Partner</h2>
-      <p>Sweetee is designed for two people. By design, your partner can see:</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Data</th>
-            <th>Visible to Partner</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Display name</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Profile photo</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Birthday</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Relationship info (how you met, distance, goals)</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Current mood &amp; mood note</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Shared photos</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Chat messages</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Doodle canvas</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Quiz answers</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Special dates you've added</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Activity streak data</td>
-            <td><strong>Yes</strong></td>
-          </tr>
-          <tr>
-            <td>Email address</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Password</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Push notification token</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Auth tokens</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>You control what content you choose to share (e.g., writing a mood note is optional). However, please be aware that most profile and relationship data is visible to your connected partner by the nature of the app.</p>
+      <h2>4. Sharing with your partner and safety review</h2>
+      <p>Sweetee is designed for two people. Your paired partner can see the profile, relationship information, moods, notes, messages, photos, doodles, quiz answers, special dates, and activity that the feature makes available in the Shared Space. They cannot see your password, authentication tokens, or push token. Your email address is not a feature of the Shared Space.</p>
+      <p>You should not share anything you would not want your partner to see. Do not use Sweetee to share non-consensual imagery, content involving minors, threats, harassment, coercion, illegal content, or spam.</p>
+      <p>When you make an in-app report, Sweetee records the report and currently sends report details to the safety team through our email delivery provider. This can include the reason for the report, identifying metadata, and a limited content snapshot or reference needed to review it. Reports are not automatically scanned or reviewed before a user submits one.</p>
 
       <hr />
 
-      <h2>5. Information Shared with Third Parties</h2>
-      <p>We do not sell your personal information. We share data with the following service providers only as necessary to operate the app:</p>
-
-      <h3>Supabase (supabase.com)</h3>
-      <p>Our backend infrastructure provider. All data described in Section 2 is stored on Supabase's servers. Supabase handles database storage, user authentication, file storage (photos, avatars, doodle exports), and server-side functions. Data is stored in the United States.</p>
-      <p><a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy</a></p>
-
-      <h3>Expo (expo.dev)</h3>
-      <p>We use Expo's push notification service to deliver notifications to your device. Your push notification token is transmitted to Expo's servers (exp.host) when notifications are sent. Expo does not receive the content of your messages or photos.</p>
-      <p><a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Expo Privacy Policy</a></p>
-
-      <h3>Apple (apple.com)</h3>
-      <p>If you use Sign in with Apple, Apple handles authentication and shares your name and email with us as per your consent choices. Apple may retain authentication data per their own privacy policy.</p>
-      <p><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a></p>
-
-      <hr />
-
-      <h2>6. Data Storage and Security</h2>
+      <h2>5. Service providers and other disclosures</h2>
+      <p>We share information with providers that process it for us to operate Sweetee. The information disclosed depends on the feature you use.</p>
       <ul>
-        <li>All data is stored on <strong>Supabase's cloud infrastructure</strong> located in the <strong>United States</strong></li>
-        <li>Authentication credentials are managed by Supabase Auth and are never stored in plaintext</li>
-        <li>Photos and files are stored in Supabase Storage with access controlled by your couple's ID</li>
-        <li>Session data is stored locally on your device using encrypted AsyncStorage</li>
-        <li>We implement access controls so that data is only accessible to the two members of a couple</li>
+        <li><strong>Supabase</strong> provides authentication, databases, file storage, real-time services, and server-side functions. It processes account, profile, Shared Space, media, report, and related service data. <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy</a></li>
+        <li><strong>RevenueCat</strong> helps administer subscriptions and entitlements. It receives the app user identifier and purchase, receipt, entitlement, and technical information needed for that service. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a></li>
+        <li><strong>Apple</strong> provides Sign in with Apple, StoreKit and App Store purchase services. Apple processes the information needed for those services under its own policy. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a></li>
+        <li><strong>Sentry</strong> receives the limited diagnostics described above so we can investigate crashes and performance issues. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Sentry Privacy Policy</a></li>
+        <li><strong>Expo and Apple Push Notification service (APNs)</strong> deliver push notifications. They receive the push token and notification title and body needed to route a notification. <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Expo Privacy Policy</a></li>
+        <li><strong>Loops</strong> manages our waitlist form and email communications. It receives the email address and form submission information you provide. <a href="https://loops.so/legal/privacy" target="_blank" rel="noopener noreferrer">Loops Privacy Policy</a></li>
+        <li><strong>Render</strong> hosts this website and may process ordinary hosting logs. <a href="https://render.com/privacy" target="_blank" rel="noopener noreferrer">Render Privacy Policy</a></li>
+        <li><strong>Resend, ImprovMX, and Google (Gmail)</strong> route and deliver support and safety email. They process the sender, recipient, message content, and relevant delivery metadata. <a href="https://resend.com/privacy" target="_blank" rel="noopener noreferrer">Resend Privacy Policy</a>, <a href="https://improvmx.com/privacy-policy" target="_blank" rel="noopener noreferrer">ImprovMX Privacy Policy</a>, and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
       </ul>
-      <p>While we take reasonable measures to protect your data, no method of transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+      <p>We may also disclose information when reasonably necessary to comply with law, protect people from harm, enforce our terms, investigate abuse, or in connection with a business transfer. We do not give advertisers access to your Shared Space.</p>
 
       <hr />
 
-      <h2>7. Data Retention</h2>
-      <p>We retain your data as long as your account is active. Specifically:</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Data Type</th>
-            <th>Retention</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Account &amp; profile</td>
-            <td>Until account deletion</td>
-          </tr>
-          <tr>
-            <td>Partner photos</td>
-            <td>Indefinite (latest photo per user)</td>
-          </tr>
-          <tr>
-            <td>Messages</td>
-            <td>Indefinite</td>
-          </tr>
-          <tr>
-            <td>Moods</td>
-            <td>Indefinite (most recent mood per user)</td>
-          </tr>
-          <tr>
-            <td>Quiz responses</td>
-            <td>Indefinite</td>
-          </tr>
-          <tr>
-            <td>Doodle canvas</td>
-            <td>Indefinite</td>
-          </tr>
-          <tr>
-            <td>Special dates</td>
-            <td>Until manually deleted by you</td>
-          </tr>
-          <tr>
-            <td>Activity streak records</td>
-            <td>Indefinite</td>
-          </tr>
-          <tr>
-            <td>Push tokens</td>
-            <td>Until account deletion or token refresh</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>When you delete your account, we will delete your personal data. Some residual data in logs or backups may persist for a short period (up to 30 days) before being purged.</p>
-
-      <hr />
-
-      <h2>8. Your Rights and Choices</h2>
-      <p>Depending on your location, you may have the following rights:</p>
+      <h2>6. Security and international processing</h2>
       <ul>
-        <li><strong>Access</strong> — Request a copy of the personal data we hold about you</li>
-        <li><strong>Correction</strong> — Update inaccurate information through the app's settings</li>
-        <li><strong>Deletion</strong> — Request that we delete your account and associated data</li>
-        <li><strong>Portability</strong> — Request your data in a portable format</li>
-        <li><strong>Withdraw consent</strong> — Opt out of push notifications at any time through your device settings</li>
+        <li>We use access controls and authentication measures intended to limit app data to the appropriate account and paired partner.</li>
+        <li>Passwords are handled by our authentication provider and are not stored by Sweetee in readable form.</li>
+        <li>We use encrypted connections in transit where supported by our providers. Sweetee is not an end-to-end encrypted messaging service.</li>
+        <li>Some service and session information may be stored locally on your device. Do not rely on an unlocked device as a private storage location.</li>
       </ul>
-      <p>To exercise any of these rights, contact us at <strong>hello@sweeteeapp.com</strong>. We will respond within 30 days. Note that deleting your account will also remove your data from your partner's shared couple space.</p>
-
-      <h3>Push Notifications</h3>
-      <p>You can disable push notifications at any time in your device's Settings app. This will not affect your ability to use other features of the app.</p>
-
-      <h3>Photo &amp; Camera Access</h3>
-      <p>You can revoke photo and camera permissions at any time in your device's Settings app. Some features (photo sharing, avatar upload) require these permissions to function.</p>
+      <p>Sweetee is operated from Taiwan and uses providers that may process information in Taiwan, the United States, and other countries. Those countries may have privacy laws different from where you live. We take steps intended to use providers with appropriate safeguards, but no transmission or storage system is completely secure.</p>
 
       <hr />
 
-      <h2>9. Children's Privacy</h2>
-      <p>Sweetee is not intended for use by anyone under the age of <strong>13</strong>. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will delete it promptly.</p>
-      <p>If you are a parent or guardian and believe your child has used Sweetee, please contact us at <strong>hello@sweeteeapp.com</strong>.</p>
+      <h2>7. Retention and account deletion</h2>
+      <p>We retain account and Shared Space information while it is needed to provide the beta, maintain security, resolve support or safety matters, and meet legal obligations. Push tokens are retained until replaced or removed with the account. Diagnostic data is retained according to the configured retention period of our diagnostics provider. Provider backups and transaction records may remain for their own retention periods.</p>
+      <p><strong>Important beta limitation:</strong> the current account-deletion feature deletes the requesting account but does not yet reliably remove all Shared Space information when the other partner remains active. As a result, some shared messages, media, and relationship records may remain available to the remaining partner or in service records after one person deletes their account. We are working to make deletion complete and atomic before public release; until then, contact <a href="mailto:hello@support.sweetee-app.com">hello@support.sweetee-app.com</a> for help with a deletion request.</p>
+      <p>Reports and support correspondence can contain particularly sensitive information. During the current beta, the retention and deletion workflow for report evidence and related inbox copies is being finalized. We will publish a specific schedule before public release; until then, we retain it only as needed for review, safety, legal obligations, and recordkeeping.</p>
 
       <hr />
 
-      <h2>10. International Users</h2>
-      <p>Sweetee is operated from Australia. If you access the app from outside Australia, your data will be transferred to and processed in the United States (where our backend infrastructure is located) and potentially Australia. By using Sweetee, you consent to this transfer.</p>
-      <p>If you are located in the European Economic Area (EEA) or United Kingdom, our legal basis for processing your data is your consent (for optional data) and the performance of our contract with you (for data necessary to provide the service).</p>
-
-      <hr />
-
-      <h2>11. California Privacy Rights (CCPA)</h2>
-      <p>If you are a California resident, you have the right to:</p>
+      <h2>8. Your choices and privacy requests</h2>
+      <p>Depending on where you live, you may have rights to access, correct, delete, restrict, object to, or receive a portable copy of your personal information. You can update some profile information in the app.</p>
       <ul>
-        <li>Know what personal information we collect, use, and share</li>
-        <li>Request deletion of your personal information</li>
-        <li>Opt out of the sale of your personal information (we do not sell personal information)</li>
-        <li>Non-discrimination for exercising your privacy rights</li>
+        <li>To make a privacy, access, correction, portability, or deletion request, email <a href="mailto:hello@support.sweetee-app.com">hello@support.sweetee-app.com</a>.</li>
+        <li>To raise an urgent safety concern, use in-app reporting where possible or email <a href="mailto:safety@support.sweetee-app.com">safety@support.sweetee-app.com</a>.</li>
+        <li>You can turn off push notifications and revoke camera, photo-library, or microphone permissions in your device settings. Some features will no longer work without the relevant permission.</li>
+        <li>To manage or cancel an Apple subscription, use your Apple account subscription settings. Deleting a Sweetee account does not cancel Apple billing.</li>
       </ul>
-      <p>To make a request, contact us at <strong>hello@sweeteeapp.com</strong>.</p>
+      <p>We may need to verify your identity before acting on a request and may retain limited information where law permits or requires it. If you believe your request has not been resolved, you may have the right to complain to your local privacy regulator.</p>
 
       <hr />
 
-      <h2>12. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. For significant changes, we will notify you through the app or by email. Your continued use of Sweetee after any changes constitutes your acceptance of the updated policy.</p>
+      <h2>9. Adults-only external beta</h2>
+      <p>Sweetee's external beta is intended only for adults who are selected or invited to participate. Do not use the beta if you are under the age of majority where you live. We do not add a separate in-app age-verification screen; eligibility is addressed through beta access and policy acceptance. If you believe a minor has provided information to Sweetee, contact us at <a href="mailto:hello@support.sweetee-app.com">hello@support.sweetee-app.com</a>.</p>
 
       <hr />
 
-      <h2>13. Contact Us</h2>
-      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:</p>
-      <p><strong>Sweetee</strong><br />Email: <strong>hello@sweeteeapp.com</strong></p>
+      <h2>10. Legal bases for EEA and UK users</h2>
+      <p>Where the GDPR or UK GDPR applies, we generally process information to provide the Sweetee service and perform our agreement with you, to comply with legal obligations, and for our legitimate interests in operating a secure and reliable service. We rely on consent where it is required, including for device permissions. You may withdraw consent through the relevant device setting or by contacting us; this does not affect processing that occurred before withdrawal.</p>
 
       <hr />
-      
-      <p><em>This Privacy Policy was last updated on April 7, 2026.</em></p>
+
+      <h2>11. California notice</h2>
+      <p>For California residents, the categories of personal information we collect are described in Section 2, and the business purposes and disclosures are described in Sections 3 through 5. We do not sell or share personal information as those terms are defined by California law. You may exercise applicable access, deletion, correction, and non-discrimination rights by contacting us through the address in Section 8.</p>
+
+      <hr />
+
+      <h2>12. Changes to this policy</h2>
+      <p>We may update this policy as Sweetee changes or legal requirements develop. We will post the revised version and update the date above. For a material change, we will provide appropriate notice and, where required, ask you to affirmatively accept the identified updated policy before you continue using the beta.</p>
+
+      <hr />
+
+      <h2>13. Contact us</h2>
+      <p>For general support, privacy questions, and privacy requests: <a href="mailto:hello@support.sweetee-app.com"><strong>hello@support.sweetee-app.com</strong></a>.</p>
+      <p>For safety concerns: <a href="mailto:safety@support.sweetee-app.com"><strong>safety@support.sweetee-app.com</strong></a>.</p>
+
+      <hr />
+      <p><em>This Privacy Policy was last updated on August 3, 2026.</em></p>
     </div>
   </main>
 
