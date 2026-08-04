@@ -19,8 +19,9 @@
       <span class="nav__logo">Sweetee</span>
       <img src="sweetee-favicon.webp" alt="Sweetee App Icon" class="nav__icon" />
     </a>
-    <div style="display: flex; align-items: center; gap: 24px;">
-      <a href="support.html" style="font-size: 14px; font-weight: 500; color: var(--neutral-600); transition: color 0.2s ease;" onmouseover="this.style.color='var(--rose-500)'" onmouseout="this.style.color='var(--neutral-600)'">Support</a>
+    <div class="nav__links">
+      <a href="terms.html" class="nav__link">Terms</a>
+      <a href="support.html" class="nav__link">Support</a>
       <a href="index.html#waitlist" class="nav__cta">Join Waitlist</a>
     </div>
   </nav>
@@ -29,8 +30,8 @@
   <main class="legal reveal visible">
     <h1 class="legal__heading">Privacy Policy</h1>
     <div class="legal__content">
-      <p><strong>Effective date:</strong> August 3, 2026</p>
-      <p><strong>Last updated:</strong> August 3, 2026</p>
+      <p><strong>Effective date:</strong> August 4, 2026</p>
+      <p><strong>Last updated:</strong> August 4, 2026</p>
       <p>This policy applies to Sweetee's external beta, the Sweetee mobile app, and this website. The beta is still evolving; we will update this policy before any material change to these practices.</p>
 
       <hr />
@@ -45,9 +46,9 @@
 
       <h3>Account and profile information</h3>
       <ul>
-        <li>email address, account identifier, and account credentials or Sign in with Apple information needed to create and secure your account;</li>
+        <li>email address, account identifier, and account credentials needed to create and secure your account;</li>
         <li>display name, birthday, avatar, relationship preferences, relationship source, distance preference, and nurture goals that you choose to provide; and</li>
-        <li>the version and time of your acceptance of Sweetee's beta terms and this policy when you create an account.</li>
+        <li>the identified versions and time of your affirmative acceptance of Sweetee's <a href="terms.html">Beta Terms</a> and this policy, including your confirmation that you are an adult invited to the beta.</li>
       </ul>
 
       <h3>Shared Space information</h3>
@@ -96,7 +97,7 @@
       <h2>4. Sharing with your partner and safety review</h2>
       <p>Sweetee is designed for two people. Your paired partner can see the profile, relationship information, moods, notes, messages, photos, doodles, quiz answers, special dates, and activity that the feature makes available in the Shared Space. They cannot see your password, authentication tokens, or push token. Your email address is not a feature of the Shared Space.</p>
       <p>You should not share anything you would not want your partner to see. Do not use Sweetee to share non-consensual imagery, content involving minors, threats, harassment, coercion, illegal content, or spam.</p>
-      <p>When you make an in-app report, Sweetee records the report and currently sends report details to the safety team through our email delivery provider. This can include the reason for the report, identifying metadata, and a limited content snapshot or reference needed to review it. Reports are not automatically scanned or reviewed before a user submits one.</p>
+      <p>When you make an in-app report, Sweetee stores the report and sensitive evidence in its protected moderation records. A metadata-only email alerts the safety reviewer and identifies the case, receipt time, content type, reason category, and opaque account identifiers. The email does not reproduce the reported message, image, or other intimate content. Reports are not automatically scanned or reviewed before a user submits one.</p>
 
       <hr />
 
@@ -105,13 +106,14 @@
       <ul>
         <li><strong>Supabase</strong> provides authentication, databases, file storage, real-time services, and server-side functions. It processes account, profile, Shared Space, media, report, and related service data. <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy</a></li>
         <li><strong>RevenueCat</strong> helps administer subscriptions and entitlements. It receives the app user identifier and purchase, receipt, entitlement, and technical information needed for that service. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a></li>
-        <li><strong>Apple</strong> provides Sign in with Apple, StoreKit and App Store purchase services. Apple processes the information needed for those services under its own policy. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a></li>
+        <li><strong>Apple</strong> provides StoreKit, App Store purchase services, and APNs. Apple processes the information needed for those services under its own policy. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a></li>
         <li><strong>Sentry</strong> receives the limited diagnostics described above so we can investigate crashes and performance issues. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Sentry Privacy Policy</a></li>
         <li><strong>Expo and Apple Push Notification service (APNs)</strong> deliver push notifications. They receive the push token and notification title and body needed to route a notification. <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Expo Privacy Policy</a></li>
         <li><strong>Loops</strong> manages our waitlist form and email communications. It receives the email address and form submission information you provide. <a href="https://loops.so/legal/privacy" target="_blank" rel="noopener noreferrer">Loops Privacy Policy</a></li>
         <li><strong>Render</strong> hosts this website and may process ordinary hosting logs. <a href="https://render.com/privacy" target="_blank" rel="noopener noreferrer">Render Privacy Policy</a></li>
         <li><strong>Resend, ImprovMX, and Google (Gmail)</strong> route and deliver support and safety email. They process the sender, recipient, message content, and relevant delivery metadata. <a href="https://resend.com/privacy" target="_blank" rel="noopener noreferrer">Resend Privacy Policy</a>, <a href="https://improvmx.com/privacy-policy" target="_blank" rel="noopener noreferrer">ImprovMX Privacy Policy</a>, and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
       </ul>
+      <p>We use these providers under their applicable service terms and data-processing commitments and require them to protect personal information consistently with this policy and applicable law. We limit each provider to the information and purposes needed for its service and review material changes to those commitments. Some providers, such as Apple, may also act independently under their own privacy policies for services you request directly.</p>
       <p>We may also disclose information when reasonably necessary to comply with law, protect people from harm, enforce our terms, investigate abuse, or in connection with a business transfer. We do not give advertisers access to your Shared Space.</p>
 
       <hr />
@@ -128,9 +130,15 @@
       <hr />
 
       <h2>7. Retention and account deletion</h2>
-      <p>We retain account and Shared Space information while it is needed to provide the beta, maintain security, resolve support or safety matters, and meet legal obligations. Push tokens are retained until replaced or removed with the account. Diagnostic data is retained according to the configured retention period of our diagnostics provider. Provider backups and transaction records may remain for their own retention periods.</p>
-      <p><strong>Important beta limitation:</strong> the current account-deletion feature deletes the requesting account but does not yet reliably remove all Shared Space information when the other partner remains active. As a result, some shared messages, media, and relationship records may remain available to the remaining partner or in service records after one person deletes their account. We are working to make deletion complete and atomic before public release; until then, contact <a href="mailto:hello@support.sweetee-app.com">hello@support.sweetee-app.com</a> for help with a deletion request.</p>
-      <p>Reports and support correspondence can contain particularly sensitive information. During the current beta, the retention and deletion workflow for report evidence and related inbox copies is being finalized. We will publish a specific schedule before public release; until then, we retain it only as needed for review, safety, legal obligations, and recordkeeping.</p>
+      <ul>
+        <li><strong>Account and Shared Space:</strong> retained while the account and pairing remain active. If either partner deletes their account, Sweetee immediately removes that account and the whole Shared Space for both partners; the surviving account remains active but becomes unpaired.</li>
+        <li><strong>Push tokens:</strong> retained until replaced, revoked, or removed with the account.</li>
+        <li><strong>Diagnostics:</strong> retained only for the configured provider period needed to investigate reliability and security events, then deleted or aggregated.</li>
+        <li><strong>Moderation evidence:</strong> reported content snapshots and detailed review notes are removed 30 days after the case closes. Minimal case metadata is removed 12 months after closure. A documented legal or credible urgent-safety hold may extend those periods only for as long as the hold remains necessary.</li>
+        <li><strong>Support correspondence:</strong> retained while the request is active and afterward only as needed for follow-up, safety, dispute resolution, or legal obligations.</li>
+        <li><strong>Backups and transactions:</strong> deletion takes effect in the live service immediately. Encrypted disaster-recovery copies may persist for up to 30 days and are protected from reintroducing deleted accounts. Apple, RevenueCat, and other providers may retain transaction, security, or legal records under their own required schedules.</li>
+      </ul>
+      <p>In-app account deletion does not wait for an active Apple subscription. It permanently deletes the account and Shared Space but does not cancel Apple billing, which must be managed separately in Apple subscription settings. A minimal pseudonymous deletion record and legally retained moderation metadata may remain so deletion can be honored after disaster recovery and safety obligations can be met.</p>
 
       <hr />
 
@@ -139,7 +147,7 @@
       <ul>
         <li>To make a privacy, access, correction, portability, or deletion request, email <a href="mailto:hello@support.sweetee-app.com">hello@support.sweetee-app.com</a>.</li>
         <li>To raise an urgent safety concern, use in-app reporting where possible or email <a href="mailto:safety@support.sweetee-app.com">safety@support.sweetee-app.com</a>.</li>
-        <li>You can turn off push notifications and revoke camera, photo-library, or microphone permissions in your device settings. Some features will no longer work without the relevant permission.</li>
+        <li>You can turn off push notifications and revoke camera or photo-library permissions in your device settings. Some features will no longer work without the relevant permission.</li>
         <li>To manage or cancel an Apple subscription, use your Apple account subscription settings. Deleting a Sweetee account does not cancel Apple billing.</li>
       </ul>
       <p>We may need to verify your identity before acting on a request and may retain limited information where law permits or requires it. If you believe your request has not been resolved, you may have the right to complain to your local privacy regulator.</p>
@@ -147,31 +155,26 @@
       <hr />
 
       <h2>9. Adults-only external beta</h2>
-      <p>Sweetee's external beta is intended only for adults who are selected or invited to participate. Do not use the beta if you are under the age of majority where you live. We do not add a separate in-app age-verification screen; eligibility is addressed through beta access and policy acceptance. If you believe a minor has provided information to Sweetee, contact us at <a href="mailto:hello@support.sweetee-app.com">hello@support.sweetee-app.com</a>.</p>
+      <p>Sweetee's external beta is intended only for adults who are selected or invited to participate. It is not offered to people in the European Economic Area or the United Kingdom during this external-beta phase. Do not use the beta if you are under the age of majority where you live or are located in an excluded beta territory. We do not add a separate in-app age-verification screen; eligibility is addressed through tester selection and affirmative policy acceptance. If you believe a minor has provided information to Sweetee, contact us at <a href="mailto:hello@support.sweetee-app.com">hello@support.sweetee-app.com</a>.</p>
 
       <hr />
 
-      <h2>10. Legal bases for EEA and UK users</h2>
-      <p>Where the GDPR or UK GDPR applies, we generally process information to provide the Sweetee service and perform our agreement with you, to comply with legal obligations, and for our legitimate interests in operating a secure and reliable service. We rely on consent where it is required, including for device permissions. You may withdraw consent through the relevant device setting or by contacting us; this does not affect processing that occurred before withdrawal.</p>
-
-      <hr />
-
-      <h2>11. California notice</h2>
+      <h2>10. California notice</h2>
       <p>For California residents, the categories of personal information we collect are described in Section 2, and the business purposes and disclosures are described in Sections 3 through 5. We do not sell or share personal information as those terms are defined by California law. You may exercise applicable access, deletion, correction, and non-discrimination rights by contacting us through the address in Section 8.</p>
 
       <hr />
 
-      <h2>12. Changes to this policy</h2>
+      <h2>11. Changes to this policy</h2>
       <p>We may update this policy as Sweetee changes or legal requirements develop. We will post the revised version and update the date above. For a material change, we will provide appropriate notice and, where required, ask you to affirmatively accept the identified updated policy before you continue using the beta.</p>
 
       <hr />
 
-      <h2>13. Contact us</h2>
+      <h2>12. Contact us</h2>
       <p>For general support, privacy questions, and privacy requests: <a href="mailto:hello@support.sweetee-app.com"><strong>hello@support.sweetee-app.com</strong></a>.</p>
       <p>For safety concerns: <a href="mailto:safety@support.sweetee-app.com"><strong>safety@support.sweetee-app.com</strong></a>.</p>
 
       <hr />
-      <p><em>This Privacy Policy was last updated on August 3, 2026.</em></p>
+      <p><em>This Privacy Policy was last updated on August 4, 2026.</em></p>
     </div>
   </main>
 

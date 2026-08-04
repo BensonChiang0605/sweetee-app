@@ -124,6 +124,31 @@ a {
     gap: var(--space-sm);
 }
 
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.nav__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--neutral-600);
+    transition: color 0.2s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+    color: var(--rose-500);
+}
+
+.nav__brand:focus-visible,
+.nav__link:focus-visible,
+.nav__cta:focus-visible {
+    outline: 3px solid var(--cream-300);
+    outline-offset: 4px;
+}
+
 .nav__icon {
     width: 50px;
     height: 50px;
