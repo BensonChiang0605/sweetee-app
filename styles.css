@@ -651,7 +651,35 @@ a {
 
 @media (max-width: 640px) {
     .nav {
+        flex-direction: row;
+        gap: 0;
         padding: var(--space-md) var(--space-lg);
+    }
+
+    .nav__brand {
+        gap: var(--space-xs);
+    }
+
+    .nav__icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+    }
+
+    .nav__logo {
+        font-size: 36px;
+        line-height: 1;
+    }
+
+    .nav__links {
+        width: auto;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    .nav__cta {
+        padding: var(--space-sm) var(--space-md);
+        white-space: nowrap;
     }
 
     .hero {
