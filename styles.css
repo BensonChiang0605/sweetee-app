@@ -674,7 +674,7 @@ a {
     .nav__links {
         width: auto;
         flex-wrap: nowrap;
-        gap: 0;
+        gap: var(--space-sm);
     }
 
     .nav__cta {
@@ -807,4 +807,14 @@ a {
 .legal__content a {
     color: var(--rose-500);
     text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .nav__icon {
+        display: none;
+    }
+
+    .nav__logo {
+        font-size: 30px;
+    }
 }
