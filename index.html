@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sweetee — Feel closer every day, in just minutes.</title>
   <meta name="description"
-    content="Sweetee brings couples closer with conversation starters, mini games, doodles, and more — in just minutes a day. Coming soon to the App Store." />
+    content="Sweetee brings couples closer with conversation starters, mini games, doodles, and more — in just minutes a day. Download Sweetee on the App Store." />
   <link rel="stylesheet" href="styles.css" />
   <!-- Favicons -->
   <link rel="icon" href="sweetee-favicon.webp" type="image/webp" />
@@ -21,7 +21,7 @@
       <img src="sweetee-favicon.webp" alt="Sweetee App Icon" class="nav__icon" />
     </a>
     <div class="nav__links">
-      <a href="#waitlist" class="nav__cta">Get Notified</a>
+      <a href="https://apps.apple.com/app/id6761756253" class="nav__cta">Get the App</a>
     </div>
   </nav>
 
@@ -31,16 +31,9 @@
       <img src="sweetee icon-2.webp" alt="Sweetee App Icon" class="hero__icon" />
       <h1 class="hero__headline">Feel closer every day,<br />in just minutes.</h1>
       <p class="hero__subheadline">
-        Sweetee brings couples closer with conversation starters, mini games, doodles, and more — in just minutes a day. Coming soon to the App Store.
+        Sweetee brings couples closer with conversation starters, mini games, doodles, and more — in just minutes a day.
       </p>
-      <form class="hero__form" id="waitlistForm">
-        <input type="email" class="hero__input" id="emailInput" placeholder="Enter your email" required
-          autocomplete="email" />
-        <button type="submit" class="hero__submit">Notify Me at Launch</button>
-      </form>
-      <div class="hero__success" id="successMessage">
-        ✓&ensp;Thanks! We'll email you when Sweetee is on the App Store.
-      </div>
+      <a href="https://apps.apple.com/app/id6761756253" class="hero__submit">Download on the App Store</a>
     </div>
 
     <div class="hero__visual">
@@ -139,42 +132,6 @@
     }, { threshold: 0.15 });
     reveals.forEach(el => observer.observe(el));
 
-    // Waitlist form
-    const form = document.getElementById('waitlistForm');
-    const emailInput = document.getElementById('emailInput');
-    const success = document.getElementById('successMessage');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = emailInput.value.trim();
-
-      if (email) {
-        try {
-          const formBody = `email=${encodeURIComponent(email)}`;
-
-          // TODO: Replace <YOUR_FORM_ID> with your actual Loops form ID
-          const response = await fetch("https://app.loops.so/api/newsletter-form/cmlxvlrt302oh0iwl16vbao0e", {
-            method: "POST",
-            body: formBody,
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-          });
-
-          if (response.ok) {
-            form.style.display = 'none';
-            success.classList.add('show');
-            console.log('Waitlist signup:', email);
-          } else {
-            alert("Something went wrong. Please try again later.");
-            console.error("Form submission failed.");
-          }
-        } catch (error) {
-          alert("An error occurred. Please try again.");
-          console.error("Error submitting form:", error);
-        }
-      }
-    });
   </script>
 
 </body>
