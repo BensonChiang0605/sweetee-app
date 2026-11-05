@@ -46,6 +46,7 @@ export function renderPage(template, copy, language, languages) {
   const values = {
     ...Object.fromEntries(Object.entries(copy).map(([key, value]) => [key, escapeHtml(value)])),
     locale: tag,
+    pageUrl: `${origin}${localePath(tag)}`,
     assetBase,
     heroImage: `${assetBase}${tag === 'en' ? 'sweetee-home-current.png' : `assets/hero/${tag}.png`}`,
     featureBase: `${assetBase}assets/features/${tag === 'en' ? '' : `${tag}/`}`,
