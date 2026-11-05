@@ -4,7 +4,9 @@
   "description": "Sweetee landing page",
   "main": "index.html",
   "scripts": {
-    "dev": "npx serve ."
+    "dev": "npx serve .",
+    "build:locales": "node scripts/build-pages.mjs",
+    "check:locales": "node scripts/build-pages.mjs --check && node --test scripts/localization.test.mjs"
   },
   "keywords": [],
   "author": "",

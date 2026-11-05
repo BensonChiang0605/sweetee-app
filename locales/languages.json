@@ -1,0 +1,34 @@
+[
+  {
+    "tag": "en",
+    "name": "English"
+  },
+  {
+    "tag": "zh-Hant",
+    "name": "繁體中文"
+  },
+  {
+    "tag": "th",
+    "name": "ไทย"
+  },
+  {
+    "tag": "fr",
+    "name": "Français"
+  },
+  {
+    "tag": "ko",
+    "name": "한국어"
+  },
+  {
+    "tag": "es",
+    "name": "Español"
+  },
+  {
+    "tag": "ja",
+    "name": "日本語"
+  },
+  {
+    "tag": "pt",
+    "name": "Português"
+  }
+]
