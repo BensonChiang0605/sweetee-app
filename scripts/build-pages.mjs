@@ -37,6 +37,7 @@ export function renderPage(template, copy, language, languages) {
         <summary aria-label="${escapeHtml(copy['nav.language'])}: ${escapeHtml(language.name)}">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18"/></svg>
           <span lang="${tag}">${escapeHtml(language.name)}</span>
+          <svg class="language-picker__chevron" viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg>
         </summary>
         <ul aria-label="${escapeHtml(copy['nav.language'])}">
             ${languageLinks}

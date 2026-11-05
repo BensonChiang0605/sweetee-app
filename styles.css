@@ -765,8 +765,8 @@ a {
 }
 
 .language-picker summary::-webkit-details-marker { display: none; }
-.language-picker summary::after { content: '⌄'; }
-.language-picker[open] summary::after { content: '⌃'; }
+.language-picker__chevron { display: block; flex-shrink: 0; }
+.language-picker[open] .language-picker__chevron { transform: rotate(180deg); }
 
 .language-picker ul {
     position: absolute;
