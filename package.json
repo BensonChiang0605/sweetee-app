@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx serve .",
     "build:locales": "node scripts/build-pages.mjs",
-    "check:locales": "node scripts/build-pages.mjs --check && node --test scripts/localization.test.mjs"
+    "check:locales": "node scripts/build-pages.mjs --check && node --test scripts/localization.test.mjs",
+    "test:quiz": "node --test relationship-quiz/*.test.mjs"
   },
   "keywords": [],
   "author": "",
