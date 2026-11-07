@@ -25,9 +25,9 @@ npm run check:locales
 npm run dev
 ```
 
-The generator writes the root `index.html` and seven language directories. Commit the generated HTML with the source changes. Deployment remains a static upload; there is no runtime framework or server build requirement. The check rejects stale pages, missing translations, broken local asset/link targets and unsafe interpolation, and exercises localized form states with a mocked request rather than sending a live signup.
+The generator writes the root `index.html` and seven language directories. Commit the generated HTML with the source changes. Deployment remains a static upload; there is no runtime framework or server build requirement. The check rejects stale pages, missing translations, broken local asset/link targets and unsafe interpolation, and checks that every page links to the App Store listing.
 
-Language selection uses ordinary links, so each URL works directly and keeps its language when reloaded. Every page has its own title, description, `lang`, canonical URL and reciprocal `hreflang` links. The picker works without JavaScript. Shared `landing.js` handles progressive reveal, keyboard dismissal and translated waitlist validation, pending, success and error states.
+Language selection uses ordinary links, so each URL works directly and keeps its language when reloaded. Every page has its own title, description, `lang`, canonical URL and reciprocal `hreflang` links. The picker works without JavaScript. Shared `landing.js` handles progressive reveal and keyboard dismissal.
 
 ## Images and legal pages
 

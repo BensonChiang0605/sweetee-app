@@ -1,6 +1,6 @@
 ## Project Overview
 
-Sweetee is a couples app landing page — a static website with a waitlist form, feature showcase, and founder's note. The site collects emails via [Loops.so](https://loops.so) for the waitlist.
+Sweetee is a couples app landing page — a static website with an App Store download link, feature showcase, and founder's note.
 
 ## Development
 
@@ -46,9 +46,9 @@ All colors and fonts are defined as CSS custom properties in [styles.css](styles
 Spacing scale: `--space-xs` (4px) through `--space-3xl` (96px).  
 Radius scale: `--radius-sm` (8px) through `--radius-xl` (28px).
 
-## Waitlist Integration
+## App Store Link
 
-Emails submit to Loops.so via a `POST` to `https://app.loops.so/api/newsletter-form/cmlxvlrt302oh0iwl16vbao0e` with `application/x-www-form-urlencoded` body. The form ID is live — handle carefully.
+Every download button points at `https://apps.apple.com/app/id6761756253`. This link has no country code, so Apple opens the visitor's own storefront. Sweetee is not sold in the EEA, the UK, South Korea or mainland China; there the link shows Apple's "not available" page.
 
 ## Skills
 

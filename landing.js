@@ -23,49 +23,4 @@
       picker.querySelector('summary').focus();
     }
   });
-
-  const form = document.getElementById('waitlistForm');
-  const input = document.getElementById('emailInput');
-  const submit = form.querySelector('button');
-  const success = document.getElementById('successMessage');
-  const errorMessage = document.getElementById('formError');
-  const submitLabel = submit.textContent;
-  let pending = false;
-  form.noValidate = true;
-  input.addEventListener('input', () => input.setCustomValidity(''));
-
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (pending) return;
-    input.value = input.value.trim();
-    input.setCustomValidity('');
-    if (!input.checkValidity()) {
-      input.setCustomValidity(form.dataset.invalid);
-      input.reportValidity();
-      return;
-    }
-    pending = true;
-    submit.disabled = true;
-    submit.textContent = form.dataset.pending;
-    form.setAttribute('aria-busy', 'true');
-    errorMessage.hidden = true;
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new URLSearchParams({ email: input.value }).toString(),
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      });
-      if (!response.ok) throw new Error('Waitlist request failed');
-      form.hidden = true;
-      success.classList.add('show');
-    } catch {
-      errorMessage.textContent = form.dataset.error;
-      errorMessage.hidden = false;
-    } finally {
-      pending = false;
-      submit.disabled = false;
-      submit.textContent = submitLabel;
-      form.removeAttribute('aria-busy');
-    }
-  });
 })();
