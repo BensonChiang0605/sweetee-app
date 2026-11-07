@@ -17,7 +17,7 @@ test('every locale has complete static content, language links and matching artw
     assert.ok(!html.includes('{{'));
     assert.ok(!html.includes('<form'));
     assert.equal((html.match(/href="https:\/\/apps\.apple\.com\/app\/id6761756253"/g) ?? []).length, 2);
-    assert.ok(html.includes(`>${copy['hero.download']}<`.replace(/'/g, '&#39;')));
+    assert.ok(html.includes(`assets/app-store-badge/${language.tag}.svg" alt="${copy['hero.download'].replace(/'/g, '&#39;')}"`));
     assert.ok(html.includes('hreflang="en">'));
     validateCopy(copy, site.source, language.tag);
     for (const [, encoded] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
