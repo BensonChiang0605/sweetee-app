@@ -635,6 +635,13 @@ a {
         margin-right: auto;
     }
 
+    .hero__download {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .features {
         padding: var(--space-2xl) var(--space-lg);
     }
