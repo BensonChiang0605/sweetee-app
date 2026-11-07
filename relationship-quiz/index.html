@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relationship Quiz: What Makes You Feel Close? | Sweetee</title>
+  <meta name="description" content="A free 30-question relationship quiz for couples. Find out what makes you feel close, then compare with your partner for a guide to what matters to them.">
+  <link rel="canonical" href="https://www.sweetee-app.com/relationship-quiz/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sweetee">
+  <meta property="og:title" content="Relationship Quiz: What Makes You Feel Close?">
+  <meta property="og:description" content="Take the free couples quiz, then send it to your partner to see what matters most to each of you and what to try this week.">
+  <meta property="og:url" content="https://www.sweetee-app.com/relationship-quiz/">
+  <meta property="og:image" content="https://www.sweetee-app.com/assets/social/sweetee-share-v3.png">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Relationship Quiz: What Makes You Feel Close?">
+  <meta name="twitter:description" content="Take the free couples quiz, then send it to your partner to see what matters most to each of you and what to try this week.">
+  <meta name="twitter:image" content="https://www.sweetee-app.com/assets/social/sweetee-share-v3.png">
+  <link rel="icon" href="../sweetee-favicon.webp" type="image/webp">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.sweetee-app.com/relationship-quiz/#webpage",
+        "url": "https://www.sweetee-app.com/relationship-quiz/",
+        "name": "Relationship Quiz: What Makes You Feel Close?",
+        "description": "A free 30-question relationship quiz for couples. Find out what makes you feel close, then compare with your partner for a guide to what matters to them.",
+        "inLanguage": "en",
+        "isPartOf": { "@type": "WebSite", "name": "Sweetee", "url": "https://www.sweetee-app.com/" },
+        "publisher": { "@type": "Organization", "name": "Sweetee", "url": "https://www.sweetee-app.com/" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Sweetee", "item": "https://www.sweetee-app.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Relationship quiz", "item": "https://www.sweetee-app.com/relationship-quiz/" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How long does the relationship quiz take?", "acceptedAnswer": { "@type": "Answer", "text": "A few minutes. There are 30 short statements, and you rate how much each one sounds like you." } },
+          { "@type": "Question", "name": "Is the quiz free? Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is free, and you don't need an account. Your answers stay in your browser." } },
+          { "@type": "Question", "name": "How do my partner and I compare results?", "acceptedAnswer": { "@type": "Answer", "text": "Copy your result link and send it to your partner. When they finish the quiz from that link, each of you sees a guide to what matters most to the other and one thing to try this week." } },
+          { "@type": "Question", "name": "How is this different from a love language quiz?", "acceptedAnswer": { "@type": "Answer", "text": "Love language quizzes sort people into a few broad categories. This quiz looks at ten specific things that can make someone feel close, such as discovery, play, quiet company and reassurance, and turns your partner's results into concrete things you can do." } },
+          { "@type": "Question", "name": "Does it work for long-distance couples?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You each take the quiz on your own device, and the partner guide includes a version of each suggestion for when you're apart." } },
+          { "@type": "Question", "name": "Is this a scientific personality test?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a self-reflection quiz, not a validated personality assessment or a compatibility score. Use it to start a conversation." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <header>
+      <p><a href="../">Sweetee</a></p>
+      <h1>Relationship quiz: what makes you feel close?</h1>
+    </header>
+    <p id="partner-notice" hidden>Your partner shared their scores. Finish the quiz to see your results together.</p>
+    <section id="intro">
+      <p>A free couples quiz with 30 short statements about what makes you feel close to your partner. Rate how much each one sounds like you. It takes a few minutes, and you don't need an account.</p>
+      <p>Then send your result link to your partner. When they finish, each of you gets a guide to what matters most to the other and one thing to try this week.</p>
+      <p>For physical affection, imagine being together in person. Answer based on what you enjoy, even if your partner currently does things differently.</p>
+      <p>Your progress stays in this browser. Results are shared only when you choose to copy a result link.</p>
+      <button id="start" type="button">Start quiz</button>
+    </section>
+    <section id="quiz" hidden>
+      <p id="position"></p>
+      <progress id="progress" max="30" value="0" aria-label="Answered questions"></progress>
+      <p>How much does this sound like you?</p>
+      <form id="question-form">
+        <fieldset><legend id="question" tabindex="-1"></legend><div id="choices"></div></fieldset>
+        <div class="actions"><button id="back" type="button" class="secondary">Back</button><button id="next" type="submit" disabled>Next</button></div>
+      </form>
+      <p class="muted">Not at all and somewhat are useful answers too. There is no ideal profile.</p>
+    </section>
+    <section id="results" hidden>
+      <h2 id="result-heading" tabindex="-1">Your results</h2>
+      <p id="summary"></p><div id="highlights"></div>
+      <h3>All ten preferences</h3>
+      <p>Scores are the average of three answers, from 1 (not at all) to 5 (very much).</p>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Preference</th><th scope="col">You</th><th id="partner-column" scope="col" hidden>Partner</th></tr></thead><tbody id="scores"></tbody></table></div>
+      <section id="guide" hidden><h3>Your guide to your partner</h3><div id="guide-body"></div></section>
+      <p id="guide-invite">Send your result link to your partner. When they finish, each of you gets a guide to what matters to the other and what to try this week.</p>
+      <section id="together" hidden><h3>Try this together</h3><p id="together-text"></p></section>
+      <p class="muted">This is an experimental self-reflection quiz. Small score differences can come from a single answer. The results are not a validated personality assessment or a compatibility score.</p>
+      <div class="actions"><button id="share" type="button">Copy my result link</button><button id="copy" type="button" class="secondary">Copy result text</button></div>
+      <p><label for="result-link">Your result link</label><input id="result-link" type="url" readonly spellcheck="false"></p>
+      <p class="muted">Your result link includes all ten scores. Anyone you send it to can compare their completed results with yours.</p>
+      <section id="sweetee">
+        <h3>Keep the little things going with Sweetee</h3>
+        <p>Sweetee is a couples app for staying close every day: daily questions, playful quizzes, shared doodles, moods and a scrapbook of your favorite moments. It’s coming soon to the App Store.</p>
+        <p><a id="sweetee-cta" href="../#waitlist">Get notified when Sweetee launches</a></p>
+      </section>
+      <div class="actions"><button id="review" type="button" class="secondary">Review my answers</button><button id="restart" type="button" class="secondary">Start a new attempt</button></div>
+      <div id="restart-confirm" hidden>
+        <p>Clear this browser’s answers and start again? Copy your result link first if you want to keep it.</p>
+        <div class="actions"><button id="cancel-restart" type="button" class="secondary">Keep my results</button><button id="confirm-restart" type="button">Clear answers and restart</button></div>
+      </div>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div id="copy-fallback" hidden><label for="copy-value">Copy this manually</label><textarea id="copy-value" readonly rows="5"></textarea></div>
+    <noscript>Please enable JavaScript to take this quiz.</noscript>
+
+    <article id="about">
+      <h2>How the quiz works</h2>
+      <p>This quiz asks what makes you feel close when your partner does it. Each statement describes a specific moment, like a photo of their lunch, a long hug, or hearing “we’re okay” after an argument, and you rate how much it sounds like you.</p>
+      <p>Your answers add up to ten preferences. You see all ten, with the answers behind each one. If several of your scores are high, the results say so instead of forcing a single type.</p>
+
+      <h2>The ten things the quiz looks at</h2>
+      <dl>
+        <dt>Inclusion</dt><dd>Feeling part of your partner’s everyday life through small, ordinary updates.</dd>
+        <dt>Feeling known</dt><dd>Your partner remembering your particular tastes and the things you mention in passing.</dd>
+        <dt>Understanding</dt><dd>Feeling understood about how something felt, not just what happened.</dd>
+        <dt>Feeling chosen</dt><dd>Your partner taking the initiative to spend time with you.</dd>
+        <dt>Practical support</dt><dd>Concrete help that makes your load lighter.</dd>
+        <dt>Reassurance</dt><dd>Hearing affection said out loud, including on ordinary days.</dd>
+        <dt>Ease</dt><dd>Quiet, unhurried company without needing an activity or constant conversation.</dd>
+        <dt>Play</dt><dd>Shared jokes, affectionate teasing and being silly together.</dd>
+        <dt>Discovery</dt><dd>Trying something new together and finding out what you both make of it.</dd>
+        <dt>Touch</dt><dd>Physical affection for its own sake, like long hugs and casual touches.</dd>
+      </dl>
+
+      <h2>Take it with your partner</h2>
+      <p>Your results are useful on their own, but the quiz is built for two. When you both finish, you each get a guide to the other: what may matter most to them, habits to build, something you might overlook, and one thing to try this week. Every suggestion has a version for long-distance couples too.</p>
+
+      <h2>Frequently asked questions</h2>
+      <h3>How long does the relationship quiz take?</h3>
+      <p>A few minutes. There are 30 short statements, and you rate how much each one sounds like you.</p>
+      <h3>Is the quiz free? Do I need an account?</h3>
+      <p>Yes, it is free, and you don’t need an account. Your answers stay in your browser.</p>
+      <h3>How do my partner and I compare results?</h3>
+      <p>Copy your result link and send it to your partner. When they finish the quiz from that link, each of you sees a guide to what matters most to the other and one thing to try this week.</p>
+      <h3>How is this different from a love language quiz?</h3>
+      <p>Love language quizzes sort people into a few broad categories. This quiz looks at ten specific things that can make someone feel close, such as discovery, play, quiet company and reassurance, and turns your partner’s results into concrete things you can do.</p>
+      <h3>Does it work for long-distance couples?</h3>
+      <p>Yes. You each take the quiz on your own device, and the partner guide includes a version of each suggestion for when you’re apart.</p>
+      <h3>Is this a scientific personality test?</h3>
+      <p>No. It is a self-reflection quiz, not a validated personality assessment or a compatibility score. Use it to start a conversation.</p>
+    </article>
+
+    <footer>
+      <p><a href="../">Sweetee</a> · <a href="../privacy.html">Privacy Policy</a> · <a href="../terms.html">Terms of Use</a></p>
+    </footer>
+  </main>
+</body>
+</html>
